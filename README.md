@@ -122,13 +122,20 @@ curl -X POST \
 ```
 
 ### Using Postman
-1. Import the following collection:
-   - Method: POST
-   - URL: `http://localhost:5000/api/convert-srt`
-   - Body: form-data
-     - Key: `srt_file`, Type: File, Value: [select your SRT file]
-     - Key: `rate`, Type: Text, Value: `150`
-     - Key: `voice_idx`, Type: Text, Value: `0`
+1. Import the collection directly from this link: [SRT to Audio Converter Collection](https://www.postman.com/navigation-engineer-74802791/srt-to-audio/collection/wawjcty/srt-to-audio-converter?action=share&creator=31974666)
+
+2. Or import the local collection file:
+  ```bash
+  postman_collection.json
+  ```
+
+3. Manual setup:
+  - Method: POST
+  - URL: `http://localhost:5000/api/convert-srt`
+  - Body: form-data
+    - Key: `srt_file`, Type: File, Value: [select your SRT file]
+    - Key: `rate`, Type: Text, Value: `150`
+    - Key: `voice_idx`, Type: Text, Value: `0`
 
 ## Configuration
 

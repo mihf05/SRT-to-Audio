@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2febed27-bfcf-4ff9-9aed-3939794c93c4",
+		"name": "SRT to Audio Converter",
+		"description": "Postman Collection for converting SRT subtitle files to audio using TTS.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31974666",
+		"_collection_link": "https://www.postman.com/navigation-engineer-74802791/srt-to-audio/collection/wawjcty/srt-to-audio-converter?action=share&source=collection_link&creator=31974666"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert SRT File to Audio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "srt_file",
+							"type": "file",
+							"src": "https://github.com/mihf05/SRT-to-Audio/blob/main/test/test.srt"
+						},
+						{
+							"key": "rate",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "voice_idx",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/convert-srt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"convert-srt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert Text to Audio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"Hello, this is a test message\",\n  \"rate\": 150,\n  \"voice_idx\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/convert-text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"convert-text"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
