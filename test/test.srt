@@ -1,0 +1,12 @@
+1
+00:00:03,000 --> 00:00:06,000
+Hello, welcome to our presentation.
+
+2
+00:00:07,000 --> 00:00:10,000
+Today we'll discuss the future of technology.
+
+3
+00:00:11,000 --> 00:00:14,000
+Let's start with the first topic.
+ 

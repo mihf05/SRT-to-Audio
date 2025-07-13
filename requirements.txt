@@ -1,0 +1,5 @@
+flask==2.3.3
+pydub==0.25.1
+pysub-parser==1.7.0
+pyttsx3==2.90
+werkzeug==2.3.7
